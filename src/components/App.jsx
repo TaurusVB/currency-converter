@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 import axios from 'axios';
 
+import { LuArrowDownUp } from 'react-icons/lu';
+
 import CurrencyRow from './CurrencyRow/CurrencyRow';
 import Header from './Header/Header';
 import { Title } from './ui/Title.styled';
@@ -77,6 +79,7 @@ export const App = () => {
           selectedCurrency={fromValue}
           amount={amountTo}
         />
+        <LuArrowDownUp size={50} color="white" style={{ marginBottom: 25 }} />
         <CurrencyRow
           onAmountChange={handleAmountFromChange}
           onCurrencyChange={handleToValueChange}
