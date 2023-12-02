@@ -8,6 +8,7 @@ export const Box = styled.p`
   font-size: 20px;
   line-height: 24px;
   font-weight: 600;
+  color: white;
 
   border-radius: 4px;
   border: 1px solid rgb(205, 215, 231);

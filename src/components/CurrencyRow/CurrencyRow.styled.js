@@ -6,16 +6,21 @@ export const Container = styled.div`
   align-items: center;
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 `;
 
 export const Input = styled.input`
+  width: 70%;
   margin-right: 10px;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 
+  background-color: #212529;
+  border: 0;
+  border-bottom: 3px solid #fff;
+  border-radius: 7px;
+
+  color: #fff;
   font-size: 16px;
   outline: none;
 
@@ -30,11 +35,16 @@ export const Input = styled.input`
 `;
 
 export const Select = styled.select`
+  width: 30%;
   margin-right: 10px;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 
+  background-color: #212529;
+  border: 0;
+  border-bottom: 3px solid #fff;
+  border-radius: 7px;
+
+  color: #fff;
   font-size: 16px;
   outline: none;
 

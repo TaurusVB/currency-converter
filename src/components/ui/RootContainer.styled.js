@@ -7,7 +7,10 @@ export const RootContainer = styled.div`
   display: block;
   justify-content: center;
   align-items: center;
+
   font-size: 40;
   color: #010101;
-  background-color: #ffffff;
+
+  background: transparent;
+  backdrop-filter: blur(10px);
 `;

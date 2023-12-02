@@ -15,4 +15,5 @@ export const Text = styled.p`
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
+  color: white;
 `;

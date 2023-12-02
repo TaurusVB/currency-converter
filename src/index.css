@@ -15,9 +15,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #d9dbda;
+  background-image: url('/assets/main_background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
 }

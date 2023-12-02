@@ -43,14 +43,14 @@ export const App = () => {
 
   function handleAmountToChange(amountTo) {
     setAmountToFrom(
-      (+(amountTo * rates[toValue]) / rates[fromValue]).toFixed(3)
+      +((amountTo * rates[toValue]) / rates[fromValue]).toFixed(3)
     );
     setAmountTo(amountTo);
   }
 
   function handleFromValueChange(fromValue) {
     setAmountToFrom(
-      (+(amountTo * rates[toValue]) / rates[fromValue]).toFixed(3)
+      +((amountTo * rates[toValue]) / rates[fromValue]).toFixed(3)
     );
     setFromValue(fromValue);
   }

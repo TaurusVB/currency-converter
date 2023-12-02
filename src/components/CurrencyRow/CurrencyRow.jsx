@@ -13,6 +13,7 @@ const CurrencyRow = ({
         type="number"
         value={amount}
         onChange={evt => onAmountChange(evt.target.value)}
+        readonly
       />
       <Select
         value={selectedCurrency}
