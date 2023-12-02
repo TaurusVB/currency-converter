@@ -1,9 +1,11 @@
-import CurrencyBox from 'components/CurrencyBox/CurrencyBox';
-import { HeaderST, Text } from './Header.styled';
 import { useEffect, useState } from 'react';
+
 import axios from 'axios';
 
-const API_URL = `https://api.exchangerate-api.com/v4/latest/UAH`;
+import CurrencyBox from 'components/CurrencyBox/CurrencyBox';
+import { HeaderST, Text } from './Header.styled';
+
+const BASE_URL = `https://api.exchangerate-api.com/v4/latest/UAH`;
 
 const Header = () => {
   const [dollar, setDollar] = useState(0);
@@ -15,13 +17,13 @@ const Header = () => {
       try {
         const {
           data: { rates, date },
-        } = await axios.get(API_URL);
+        } = await axios.get(BASE_URL);
 
         setDollar(rates['USD']);
         setEuro(rates['EUR']);
         setDate(date);
       } catch (error) {
-        console.log(error);
+        console.log('FETCH_CURRENCY_VALUES_ERROR', error);
       }
     }
 
@@ -32,8 +34,11 @@ const Header = () => {
     <HeaderST>
       <Text>Скільки ж зараз коштує українська гривня? А це</Text>
       <CurrencyBox value={dollar} currencyCode={'USD (Долар)'} />
+      <Text>або</Text>
       <CurrencyBox value={euro} currencyCode={'EUR (Євро)'} />
-      <Text>cтаном на {date}</Text>
+      <Text>
+        cтаном на <time>{date}</time>
+      </Text>
     </HeaderST>
   );
 };
